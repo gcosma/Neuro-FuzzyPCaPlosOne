@@ -1,0 +1,58 @@
+[System]
+Name='Prostate_Prediction'
+Type='sugeno'
+Version=2.0
+NumInputs=5
+NumOutputs=1
+NumRules=2
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='Gleason1'
+Range=[3 5]
+NumMFs=2
+MF1='OCD':'gaussmf',[0.548678520757927 3.41279917901063]
+MF2='ED':'gaussmf',[0.461488233221387 3.67779492684717]
+
+[Input2]
+Name='Gleason2'
+Range=[3 5]
+NumMFs=2
+MF1='OCD':'gaussmf',[0.612061317794677 3.62297411209298]
+MF2='ED':'gaussmf',[0.461066206753727 3.90196640586682]
+
+[Input3]
+Name='PSAGroup'
+Range=[1 6]
+NumMFs=2
+MF1='OCD':'gaussmf',[0.959154003496932 3.5731210918039]
+MF2='ED':'gaussmf',[0.808744102608339 3.93499527170502]
+
+[Input4]
+Name='AgeGroup'
+Range=[5 11]
+NumMFs=2
+MF1='OCD':'gaussmf',[1.13575170781674 8.25369783915267]
+MF2='ED':'gaussmf',[0.961772907639743 8.7766337734997]
+
+[Input5]
+Name='ClinicalTstageGroup'
+Range=[1 5]
+NumMFs=2
+MF1='OCD':'gaussmf',[0.941081334575206 1.40296702063076]
+MF2='ED':'gaussmf',[1.26403224264548 3.27629976518619]
+
+[Output1]
+Name='PathologicalStage'
+Range=[1 2]
+NumMFs=2
+MF1='OCD':'linear',[0.382101235363633 0.0423865422551681 0.0235907020814026 0.0294421920536912 0.104801371394838 -0.418729154901204]
+MF2='ED':'linear',[0.178925854463216 0.133228144013989 0.0342192972835654 0.00609076808605836 0.132472051269724 -0.249155368072005]
+
+[Rules]
+1 1 1 1 1, 1 (1) : 1
+2 2 2 2 2, 2 (1) : 1
