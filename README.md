@@ -22,7 +22,7 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 
 %INSTRUCTIONS
 
-%Please email georgina.cosma@ntu.ac.uk if you are experiencing any problems with performing the experiments using the 
+%Please email g.cosma@lboro.ac.uk if you are experiencing any problems with performing the experiments using the 
 %PLOSdata or if using the code on another dataset. 
 
 
